@@ -1,208 +1,148 @@
-import { useState } from 'react';
-import './App.css';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
 
-function App() {
-  const [paginaAtual, setPaginaAtual] = useState('inicio');
-
-  const navegarPara = (pagina) => {
-    setPaginaAtual(pagina);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  return (
-    <div className="app-container">
-      
-      {/* NAVBAR (Mesma de antes) */}
-      <nav className="navbar">
-        <div className="nav-logo" onClick={() => navegarPara('inicio')}>
-          JP<span className="dot">.</span>
-        </div>
-        <div className="nav-links">
-          <button 
-            className={paginaAtual === 'inicio' ? 'nav-btn active' : 'nav-btn'} 
-            onClick={() => navegarPara('inicio')}
-          >
-            Início
-          </button>
-          <button 
-            className={paginaAtual === 'projetos' ? 'nav-btn active' : 'nav-btn'} 
-            onClick={() => navegarPara('projetos')}
-          >
-            Portfólio
-          </button>
-          <button 
-            className={paginaAtual === 'certificados' ? 'nav-btn active' : 'nav-btn'} 
-            onClick={() => navegarPara('certificados')}
-          >
-            Diplomas
-          </button>
-        </div>
-      </nav>
-
-      <main className="main-content fade-in">
-        
-        {/* === HOME === */}
-        {paginaAtual === 'inicio' && (
-          <>
-            <section className="hero">
-              <div className="hero-content">
-                <span className="greeting">Portfólio Profissional</span>
-                <h1 className="name">João Pedro Padilha <span className="gradient-text">Martins</span></h1>
-                
-                {/* INFORMAÇÃO DA GRADUAÇÃO (Inserida sutilmente no layout) */}
-                <h2 className="role">
-                  Dev Full Stack & Assistente Administrativo <br/>
-                  <span className="sub-role">🎓 3º Ano / 5º Período Noturno - Sistemas de Informação</span>
-                </h2>
-                
-                <div className="contact-pills">
-                  <span className="pill">📞 (41) 99735-7401</span>
-                  <a href="mailto:joaopmartins1608@gmail.com" className="pill">✉️ joaopmartins1608@gmail.com</a>
-                  <span className="pill">📍 Curitiba, PR</span>
-                </div>
-
-                {/* DESCRIÇÃO "SOBRE MIM" (No mesmo estilo limpo de antes) */}
-                <p className="bio">
-                  Sou um desenvolvedor em formação apaixonado por resolver problemas. 
-                  Meu diferencial é unir a capacidade técnica de programação (Full Stack) 
-                  com a organização administrativa. Tenho facilidade em aprender novas tecnologias 
-                  e busco estágio para aplicar meus conhecimentos em <strong>Java, React e Gestão de Dados</strong>.
-                </p>
-                
-                <div className="hero-actions">
-                  <button onClick={() => navegarPara('projetos')} className="cta-button primary">Ver Projetos</button>
-                  <a href="https://github.com/joaopmartins1608" target="_blank" rel="noreferrer" className="cta-button outline">GitHub</a>
-                  <a href="https://www.linkedin.com/in/joão-pedro-padilhamartins/" target="_blank" rel="noreferrer" className="cta-button outline">LinkedIn</a>
-                </div>
-              </div>
-            </section>
-
-            {/* BLOCO DAS 4 LINGUAGENS (Visual de Cards Limpos) */}
-            <section className="section-preview">
-              <h3 className="section-title-center">Minhas Principais Tecnologias</h3>
-              <div className="skills-preview-grid">
-                
-                <div className="skill-box highlight">
-                  <div className="icon-big">⚛️</div>
-                  <strong>React.js</strong>
-                  <span className="skill-desc">Web</span>
-                </div>
-
-                <div className="skill-box highlight">
-                  <div className="icon-big">☕</div>
-                  <strong>Java</strong>
-                  <span className="skill-desc">Backend</span>
-                </div>
-
-                <div className="skill-box highlight">
-                  <div className="icon-big">🐍</div>
-                  <strong>Python</strong>
-                  <span className="skill-desc">Dados</span>
-                </div>
-
-                <div className="skill-box highlight">
-                  <div className="icon-big">💾</div>
-                  <strong>SQL</strong>
-                  <span className="skill-desc">Banco</span>
-                </div>
-
-              </div>
-            </section>
-          </>
-        )}
-
-        {/* === PORTFÓLIO (Mantido Igual) === */}
-        {paginaAtual === 'projetos' && (
-          <div className="page-section slide-up">
-            <h2 className="page-title">Portfólio & Documentação</h2>
-            <p className="page-desc">Projetos práticos de desenvolvimento e exemplos de organização administrativa.</p>
-
-            <div className="category-group">
-              <h3 className="category-title">💻 Desenvolvimento</h3>
-              <div className="projects-grid">
-                <div className="project-card">
-                  <div className="card-header">
-                    <span className="tag react">React + API</span>
-                    <h4>Buscador de CEP</h4>
-                  </div>
-                  <p>Aplicação web para consulta automática de endereços via API ViaCEP.</p>
-                  <a href="https://github.com/joaopmartins1608/portfolio-react" target="_blank" rel="noreferrer" className="btn-link">Ver Código ➜</a>
-                </div>
-                <div className="project-card">
-                  <div className="card-header">
-                    <span className="tag java">Java Backend</span>
-                    <h4>Sistema Bancário</h4>
-                  </div>
-                  <p>Simulador de banco com lógica de POO, saques e depósitos seguros.</p>
-                  <a href="https://github.com/joaopmartins1608/portfolio-java" target="_blank" rel="noreferrer" className="btn-link">Ver Código ➜</a>
-                </div>
-              </div>
-            </div>
-
-            <div className="category-group">
-              <h3 className="category-title">💾 Dados & SQL</h3>
-              <div className="projects-grid">
-                <div className="project-card">
-                  <div className="card-header">
-                    <span className="tag sql">SQL</span>
-                    <h4>Gestão de Tickets</h4>
-                  </div>
-                  <p>Estrutura de banco de dados para sistema de suporte e SLA.</p>
-                  <a href="https://github.com/joaopmartins1608/repositorio-sql" target="_blank" rel="noreferrer" className="btn-link">Ver Queries ➜</a>
-                </div>
-              </div>
-            </div>
-            
-             <div className="category-group">
-              <h3 className="category-title">📋 Gestão & Admin</h3>
-              <div className="projects-grid">
-                <div className="project-card admin-mode">
-                  <div className="card-header">
-                    <span className="tag admin">Kanban</span>
-                    <h4>Gestão de Tarefas</h4>
-                  </div>
-                  <p>Organização de fluxo de trabalho.</p>
-                  <div className="fake-img">📸 Print Trello</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* === DIPLOMAS (Mantido Igual) === */}
-        {paginaAtual === 'certificados' && (
-          <div className="page-section slide-up">
-            <h2 className="page-title">Meus Certificados</h2>
-            <div className="certificados-grid">
-              <div className="cert-card">
-                <div className="cert-img-container">
-                  <img src="https://placehold.co/600x400/1e293b/FFF?text=Diploma+Sistemas" alt="Faculdade" />
-                </div>
-                <div className="cert-info">
-                  <h4>Sistemas de Informação</h4>
-                  <p>Cursando 5º Período</p>
-                </div>
-              </div>
-              <div className="cert-card">
-                <div className="cert-img-container">
-                  <img src="https://placehold.co/600x400/2563eb/FFF?text=Curso+Java" alt="Java" />
-                </div>
-                <div className="cert-info">
-                  <h4>Curso Java Completo</h4>
-                  <p>40 Horas</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-      </main>
-
-      <footer className="footer">
-        <p>© 2024 João Pedro Padilha Martins. Feito com React.</p>
-      </footer>
-    </div>
-  );
+:root {
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --primary: #38bdf8;
+  --secondary: #a855f7;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --gradient: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
 }
 
-export default App;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root { width: 100%; min-height: 100vh; }
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+}
+
+.app-container {
+  display: flex; flex-direction: column; min-height: 100vh; width: 100%;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky; top: 0; z-index: 1000;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 5%; width: 100%;
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+.nav-logo { font-weight: 700; font-size: 1.5rem; cursor: pointer; color: white; white-space: nowrap; }
+.dot { color: var(--primary); }
+.nav-links { display: flex; gap: 10px; }
+.nav-btn {
+  background: transparent; border: none; color: var(--text-muted);
+  font-size: 0.9rem; font-weight: 600; cursor: pointer; padding: 8px 16px;
+  border-radius: 20px; transition: 0.3s; white-space: nowrap;
+}
+.nav-btn:hover { color: var(--text-main); background: rgba(255,255,255,0.05); }
+.nav-btn.active { background: rgba(56, 189, 248, 0.15); color: var(--primary); }
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1; width: 100%; max-width: 1400px; margin: 0 auto;
+  padding: 40px 5%; display: flex; flex-direction: column;
+}
+
+/* ANIMAÇÕES */
+.fade-in { animation: fadeIn 0.8s ease-out; }
+.slide-up { animation: slideUp 0.6s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* HERO */
+.hero {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; min-height: 60vh; margin-bottom: 40px;
+}
+.greeting { color: var(--primary); font-weight: bold; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 15px; letter-spacing: 2px; }
+.name { font-size: clamp(2.5rem, 5vw, 4.5rem); margin: 0 0 15px 0; line-height: 1.1; }
+.gradient-text { background: var(--gradient); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+
+.role { font-size: clamp(1.1rem, 2vw, 1.5rem); color: var(--text-muted); font-weight: 300; margin-bottom: 25px; line-height: 1.4; }
+.sub-role { color: var(--primary); font-size: 1rem; font-weight: 600; display: block; margin-top: 8px; }
+
+.contact-pills { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-bottom: 35px; width: 100%; }
+.pill { 
+  display: flex; align-items: center; gap: 8px; font-size: 0.9rem;
+  background: rgba(255,255,255,0.05); padding: 8px 20px; border-radius: 50px;
+  color: var(--text-main); text-decoration: none; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s;
+}
+.pill:hover { border-color: var(--primary); background: rgba(56, 189, 248, 0.1); }
+.bio { max-width: 800px; margin: 0 auto 40px auto; line-height: 1.7; color: var(--text-muted); font-size: 1.1rem; }
+
+.hero-actions { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+.cta-button { padding: 14px 35px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1rem; border: none; transition: transform 0.2s; white-space: nowrap; }
+.cta-button:hover { transform: translateY(-3px); }
+.cta-button.primary { background: var(--gradient); color: white; box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3); }
+.cta-button.outline { background: transparent; border: 1px solid var(--primary); color: var(--primary); }
+
+/* SKILLS */
+.section-preview { text-align: center; margin: 40px 0; width: 100%; }
+.section-title-center { font-size: 1.5rem; margin-bottom: 30px; color: var(--text-main); }
+.skills-preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; width: 100%; }
+.skill-box { 
+  background: var(--bg-card); padding: 25px; border-radius: 12px; 
+  border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; align-items: center;
+  transition: 0.3s;
+}
+.skill-box:hover { transform: translateY(-5px); border-color: var(--primary); background: rgba(255,255,255,0.05); }
+.icon-big { font-size: 2.5rem; margin-bottom: 10px; }
+
+/* PÁGINAS INTERNAS */
+.page-title { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 15px; }
+.page-desc { color: var(--text-muted); margin-bottom: 50px; border-left: 4px solid var(--secondary); padding-left: 20px; font-size: 1.2rem; }
+.category-title { font-size: 1.5rem; margin-bottom: 25px; color: var(--text-main); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-top: 40px; }
+
+/* GRIDS RESPONSIVOS */
+.projects-grid, .certificados-grid { 
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; width: 100%;
+}
+.project-card, .cert-card { 
+  background: rgba(255,255,255,0.03); border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); 
+  transition: 0.3s; display: flex; flex-direction: column; overflow: hidden;
+}
+.project-card { padding: 30px; }
+.project-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+.tag { font-size: 0.75rem; padding: 5px 12px; border-radius: 6px; font-weight: bold; text-transform: uppercase; }
+.tag.react { background: rgba(97, 218, 251, 0.1); color: #61dafb; }
+.tag.java { background: rgba(248, 152, 32, 0.1); color: #f89820; }
+.tag.sql { background: rgba(168, 85, 247, 0.1); color: #a855f7; }
+.tag.admin { background: rgba(37, 99, 235, 0.1); color: #3b82f6; }
+.project-card p { font-size: 1rem; color: var(--text-muted); margin-bottom: 25px; line-height: 1.6; flex: 1; }
+.btn-link { color: var(--primary); text-decoration: none; font-weight: bold; display: inline-block; padding-bottom: 2px; border-bottom: 1px solid transparent; }
+.btn-link:hover { border-bottom-color: var(--primary); }
+.fake-img { width: 100%; height: 180px; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; border-radius: 8px; color: #64748b; border: 2px dashed #475569; margin-top: auto; }
+
+/* CERTIFICADOS */
+.cert-card:hover { transform: scale(1.02); border-color: var(--secondary); }
+.cert-img-container { width: 100%; height: 220px; overflow: hidden; background: #000; }
+.cert-img-container img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: 0.4s; }
+.cert-card:hover img { opacity: 1; transform: scale(1.05); }
+.cert-info { padding: 25px; }
+.cert-info h4 { margin: 0 0 10px 0; color: var(--text-main); font-size: 1.1rem; }
+.cert-info p { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
+
+/* FOOTER */
+.footer { 
+  text-align: center; padding: 40px 20px; width: 100%;
+  border-top: 1px solid rgba(255,255,255,0.05); 
+  font-size: 0.9rem; color: #64748b; background: rgba(15, 23, 42, 0.95);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-logo { display: none; }
+  .nav-links { width: 100%; justify-content: space-between; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .cta-button { width: 100%; }
+  .skills-preview-grid, .projects-grid, .certificados-grid { grid-template-columns: 1fr; }
+}
