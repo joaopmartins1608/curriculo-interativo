@@ -48,7 +48,7 @@ function App() {
               <div className="hero-content">
                 <span className="greeting">Portfólio Profissional</span>
                 
-                {/* NOME COMPLETO ATUALIZADO */}
+                {/* NOME COMPLETO AGORA */}
                 <h1 className="name">
                   João Pedro <span className="gradient-text">Padilha Martins</span>
                 </h1>
@@ -165,11 +165,11 @@ function App() {
           </div>
         )}
 
-        {/* === FORMAÇÃO (VERSÃO PLANO B - HONESTA) === */}
+        {/* === FORMAÇÃO (Plano B: Apenas Faculdade) === */}
         {paginaAtual === 'certificados' && (
           <div className="page-section slide-up">
             <h2 className="page-title">Formação Acadêmica</h2>
-            <p className="page-desc">Jornada educacional e aprimoramento constante.</p>
+            <p className="page-desc">Educação formal em andamento.</p>
 
             <div className="certificados-grid">
               
@@ -180,31 +180,11 @@ function App() {
                 <div className="cert-info">
                   <h4>Sistemas de Informação</h4>
                   <p>Bacharelado • 5º Período (Cursando)</p>
-                  <small style={{color: '#38bdf8'}}>Previsão de conclusão: 2026</small>
+                  <small style={{color: '#38bdf8'}}>Previsão de Conclusão: 2026</small>
                 </div>
               </div>
 
-              <div className="cert-card">
-                <div className="cert-img-container">
-                  <img src="https://placehold.co/600x400/2563eb/FFF?text=Java+POO" alt="Java" />
-                </div>
-                <div className="cert-info">
-                  <h4>Linguagem Java & POO</h4>
-                  <p>Estudos Autodidatas & Projetos</p>
-                  <small>Conhecimento aplicado no Portfólio (GitHub)</small>
-                </div>
-              </div>
-
-              <div className="cert-card">
-                <div className="cert-img-container">
-                  <img src="https://placehold.co/600x400/16a34a/FFF?text=Excel+Avancado" alt="Excel" />
-                </div>
-                <div className="cert-info">
-                  <h4>Excel para Negócios</h4>
-                  <p>Conhecimento Avançado</p>
-                  <small>Fórmulas, Tabelas Dinâmicas e Dashboards</small>
-                </div>
-              </div>
+              {/* Removidos Java e Excel conforme solicitado */}
 
             </div>
           </div>
