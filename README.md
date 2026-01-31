@@ -60,13 +60,3 @@ Email: joaopmartins1608@gmail.com
 WhatsApp: (41) 99735-7401
 
 Desenvolvido por João Pedro Martins | 2026
-
-
----
-
-### Porquê este README funciona?
-1. **Destaque do "Como":** Tu não dizes apenas que fizeste um zoom; tu explicas que usaste `onMouseMove` e `transform-origin`. Isso prova conhecimento técnico de JavaScript e CSS.
-2. **Palavras-Chave:** Termos como `History API`, `SPA`, `popstate` e `hooks` são o que os filtros de recrutamento procuram.
-3. **Organização:** Mostra que te preocupas com a manutenção do código.
-
-**O que achas desta estrutura?** Se estiver ao teu gosto, basta subires para o GitHub. Depois disso, se quiseres, podemos fazer aquela **simulação rápida de entrevista** para treinares a explicação destes pontos!
