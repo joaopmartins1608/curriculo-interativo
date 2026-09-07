@@ -12,14 +12,52 @@ interface Project {
 }
 
 const allProjects: Project[] = [
+  // --- Novos Projetos de Hoje (06/09) ---
+  {
+    title: 'IPv4 Subnet & CIDR Calculator',
+    category: 'Ferramentas',
+    stack: 'React • TypeScript • Vite',
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80',
+    desc: 'Utilitário de redes para cálculo instantâneo de blocos CIDR (/0 a /32), máscaras decimais, endereços de rede, broadcast e dimensionamento de hosts utilizáveis.',
+    github: 'https://github.com/joaopmartins1608/ipv4-subnet-calculator',
+    featured: true
+  },
+  {
+    title: 'JSON ↔ CSV Data Converter & Validator',
+    category: 'Ferramentas',
+    stack: 'React • TypeScript • Vite',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
+    desc: 'Ferramenta bidirecional para transformação e validação de estruturas tabulares e hierárquicas, inferência dinâmica de tipos primitivos e cópia com um clique.',
+    github: 'https://github.com/joaopmartins1608/json-csv-data-converter',
+    featured: true
+  },
+  {
+    title: 'Dynamic KPI & SVG Sparkline Widget',
+    category: 'Ferramentas',
+    stack: 'React • TypeScript • SVG Nativo • Vite',
+    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80',
+    desc: 'Componente analítico para visualização de métricas de desempenho com mapeamento matemático de séries temporais em SVG puro e cálculo de tendências.',
+    github: 'https://github.com/joaopmartins1608/kpi-sparkline-widget',
+    featured: true
+  },
+  {
+    title: 'Data Integrity & Document Validator API',
+    category: 'Software',
+    stack: 'C# • .NET 8 • Minimal APIs • Swagger',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80',
+    desc: 'Web API RESTful de alta performance para geração e verificação de hashes criptográficos (SHA-256, SHA-512, MD5) e validação matemática de CPF/CNPJ.',
+    github: 'https://github.com/joaopmartins1608/data-integrity-api',
+    featured: true
+  },
+
+  // --- Projetos Anteriores ---
   {
     title: 'DevLog & README Architect',
     category: 'Ferramentas',
     stack: 'React • TypeScript • Vite • Lucide',
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80',
     desc: 'Ferramenta client-side reativa para estruturar decisões de arquitetura e gerar documentações padronizadas em Markdown com preview e download instantâneos.',
-    github: 'https://github.com/joaopmartins1608/devlog-readme-architect',
-    featured: true
+    github: 'https://github.com/joaopmartins1608/devlog-readme-architect'
   },
   {
     title: 'Web Image Optimizer & Converter',
@@ -27,8 +65,7 @@ const allProjects: Project[] = [
     stack: 'React • TypeScript • Canvas API • FileReader',
     image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80',
     desc: 'Compressor e conversor de imagens (WebP, PNG e JPEG) 100% privado e client-side via HTML5 Canvas, sem envio de arquivos para servidores externos.',
-    github: 'https://github.com/joaopmartins1608/web-image-optimizer',
-    featured: true
+    github: 'https://github.com/joaopmartins1608/web-image-optimizer'
   },
   {
     title: 'Focus & Habit Tracker',
@@ -36,8 +73,7 @@ const allProjects: Project[] = [
     stack: 'React • TypeScript • Web Storage API',
     image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80',
     desc: 'Temporizador Pomodoro adaptativo com gerenciamento rigoroso de intervalos, categorização por contexto de estudo e métricas persistidas no navegador.',
-    github: 'https://github.com/joaopmartins1608/focus-habit-tracker',
-    featured: true
+    github: 'https://github.com/joaopmartins1608/focus-habit-tracker'
   },
   {
     title: 'Gestor de Despesas Domésticas',
@@ -99,7 +135,7 @@ export const Projects: React.FC = () => {
         </div>
       </div>
 
-      {/* Grid de Cards dos 4 Projetos */}
+      {/* Grid de Cards dos Projetos */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(330px, 1fr))',
