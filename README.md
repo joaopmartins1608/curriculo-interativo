@@ -1,75 +1,29 @@
-# React + TypeScript + Vite
+# ⚡ João Pedro Padilha Martins — Portfolio & Interactive Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Plataforma interativa desenvolvida com **React**, **TypeScript** e **Vite**, projetada para centralizar a documentação, demonstração prática e links de produção de projetos de software, ferramentas utilitárias, trajetória acadêmica e certificações técnicas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Funcionalidades da Plataforma
 
-## React Compiler
+- **Galeria Dinâmica de Projetos:** Sistema reativo com categorização e filtros (`Todos`, `Ferramentas`, `Software`), badges contextuais e links diretos para repositórios.
+- **História & Perfil Multidisciplinar:** Seção estruturada cobrindo atuação em tecnologia, design de interfaces, hobbies e trajetória artística.
+- **Central de Certificações com Modal:** Exibição de formações acadêmicas e certificados com visualização nativa de documentos oficiais (*lightbox modal*).
+- **Design System & Performance:** Interface moderna construída sobre estética *glassmorphism*, dark theme, responsividade total e carregamento instantâneo via Vite.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Stack Tecnológica
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Iconografia:** [Lucide React](https://lucide.dev/)
+- **Hospedagem & Deploy:** [Vercel](https://vercel.com/) com pipeline contínuo (CI/CD) via GitHub
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 💻 Como Rodar Localmente
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+1. Clone o repositório:
+   ```bash
+   git clone [https://github.com/joaopmartins1608/SEU-REPOSITORIO.git](https://github.com/joaopmartins1608/SEU-REPOSITORIO.git)
