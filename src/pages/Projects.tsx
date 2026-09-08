@@ -12,15 +12,52 @@ interface Project {
 }
 
 const allProjects: Project[] = [
-  // --- Projetos Concluídos Hoje ---
+  // --- Novos Projetos Concluídos (Softwares Full-Stack & Ferramentas) ---
+  {
+    title: 'API Status & Health Monitor',
+    category: 'Software',
+    stack: '.NET 8 • C# • SQLite • React • TypeScript',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80',
+    desc: 'Plataforma full-stack para monitoramento contínuo de disponibilidade HTTP, medição de latência em milissegundos e background worker com persistência relacional SQLite.',
+    github: 'https://github.com/joaopmartins1608/api-health-monitor',
+    featured: true
+  },
+  {
+    title: 'Sprint & Incident Issue Tracker',
+    category: 'Software',
+    stack: '.NET 8 • C# • SQLite • React • TypeScript',
+    image: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=600&q=80',
+    desc: 'Quadro Kanban interativo para gerenciamento ágil de chamados técnicos e bugs, com triagem por severidade, avanço dinâmico de status e CRUD RESTful.',
+    github: 'https://github.com/joaopmartins1608/issue-tracker-hub',
+    featured: true
+  },
+  {
+    title: 'Regex Pattern Sandbox & Explainer',
+    category: 'Ferramentas',
+    stack: 'React • TypeScript • Vite • Lucide',
+    image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80',
+    desc: 'Ambiente interativo client-side para validação de expressões regulares em tempo real, decomposição de grupos de captura, flags dinâmicas e biblioteca de padrões prontos.',
+    github: 'https://github.com/joaopmartins1608/regex-sandbox-tool',
+    featured: true
+  },
+  {
+    title: 'HTTP Header & JWT Inspector',
+    category: 'Ferramentas',
+    stack: 'React • TypeScript • Vite • Web APIs',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80',
+    desc: 'Decodificador seguro de tokens JWT e analisador de cabeçalhos de segurança web (CSP, CORS, HSTS) com auditoria de expiração, 100% no navegador.',
+    github: 'https://github.com/joaopmartins1608/jwt-header-inspector',
+    featured: true
+  },
+
+  // --- Projetos Anteriores ---
   {
     title: 'Finance Dashboard',
     category: 'Software',
     stack: 'Python • Pandas • Matplotlib • Seaborn',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
     desc: 'Pipeline completo de análise financeira em Python para processamento de transações, consolidação de métricas por categoria e geração automatizada de relatórios visuais.',
-    github: 'https://github.com/joaopmartins1608/finance-dashboard',
-    featured: true
+    github: 'https://github.com/joaopmartins1608/finance-dashboard'
   },
   {
     title: 'Customer Management System',
@@ -28,8 +65,7 @@ const allProjects: Project[] = [
     stack: 'Java • POO • Clean Architecture • NIO.2',
     image: 'https://midias-totvs.totvs.com/wp-content/uploads/2024/10/gestao-de-clientes.jpg.webp',
     desc: 'Sistema em camadas (Model, Repository, Service, CLI) para cadastro e gestão de clientes, com regras de validação estritas e persistência direta em disco.',
-    github: 'https://github.com/joaopmartins1608/customer-management-system',
-    featured: true
+    github: 'https://github.com/joaopmartins1608/customer-management-system'
   },
   {
     title: 'Task Flow',
@@ -37,8 +73,7 @@ const allProjects: Project[] = [
     stack: 'HTML5 • CSS3 Moderno • Vanilla JavaScript',
     image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=600&q=80',
     desc: 'Gerenciador de tarefas diárias responsivo com filtros dinâmicos de status, contador de pendências em tempo real e sincronização persistente via Web Storage API.',
-    github: 'https://github.com/joaopmartins1608/task-manager-web',
-    featured: true
+    github: 'https://github.com/joaopmartins1608/task-manager-web'
   },
   {
     title: 'Email & Report Automator',
@@ -46,11 +81,8 @@ const allProjects: Project[] = [
     stack: 'Python • Scripting • Template Engine • Logging',
     image: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&w=600&q=80',
     desc: 'Ferramenta CLI para automação de despachos de relatórios por e-mail com interpolação de métricas dinâmicas, logs rotacionados e suporte a modo de simulação (dry-run).',
-    github: 'https://github.com/joaopmartins1608/email-report-automator',
-    featured: true
+    github: 'https://github.com/joaopmartins1608/email-report-automator'
   },
-
-  // --- Projetos Utilitários ---
   {
     title: 'IPv4 Subnet & CIDR Calculator',
     category: 'Ferramentas',
