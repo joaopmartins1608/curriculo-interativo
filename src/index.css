@@ -1,9 +1,13 @@
+/* ===================================================
+   1. RESET GLOBAL & DESIGN TOKENS
+   =================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -22,15 +26,38 @@
   --text-secondary: #94a3b8;
 }
 
-body {
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
   background-color: var(--bg-primary);
   color: var(--text-main);
+}
+
+body {
+  min-height: 100vh;
   background-image: 
     radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
     radial-gradient(circle at 85% 60%, rgba(168, 85, 247, 0.08) 0%, transparent 45%);
-  min-height: 100vh;
 }
 
+/* Scrollbar com tema escuro discreto */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* ===================================================
+   2. UTILITÁRIOS & COMPONENTES VISUAIS
+   =================================================== */
 .glass-panel {
   background: var(--panel);
   backdrop-filter: blur(14px);
@@ -42,7 +69,7 @@ body {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Cursor piscando para o efeito typewriter */
+/* Cursor piscando para o efeito Typewriter */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -67,14 +94,13 @@ body {
   transform: rotate(360deg) scale(1.18);
 }
 
-/* Movimentação física dos elétrons quânticos */
+/* Animações de Física Quântica e Transições */
 @keyframes electronFloat {
   0% { transform: translate(0px, 0px); }
   50% { transform: translate(6px, -8px); }
   100% { transform: translate(0px, 0px); }
 }
 
-/* Animação suave de deslizar para o lado com fade no Carrossel */
 @keyframes slideInCard {
   from {
     opacity: 0;
@@ -88,4 +114,140 @@ body {
 
 .slide-card-enter {
   animation: slideInCard 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================================
+   3. RESPONSIVIDADE CONSOLIDADA (MOBILE <= 768px)
+   =================================================== */
+@media (max-width: 768px) {
+  main {
+    padding: 2rem 1.2rem !important;
+    gap: 3rem !important;
+  }
+
+  h1 {
+    font-size: 2.2rem !important;
+  }
+
+  h2 {
+    font-size: 1.6rem !important;
+  }
+
+  /* Redimensionamento e alinhamento do átomo da Home */
+  div[style*="width: 420px"][style*="height: 420px"] {
+    width: 320px !important;
+    height: 320px !important;
+    transform: scale(0.85);
+    transform-origin: center center;
+    margin: 1rem auto;
+  }
+
+  /* Grid de projetos: 1 coluna fluida */
+  div[style*="repeat(auto-fill, minmax(330px, 1fr))"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Carrossel de Projetos */
+  .slide-card-enter {
+    padding: 1.25rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .slide-card-enter > div:last-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem !important;
+  }
+
+  .slide-card-enter a,
+  .slide-card-enter button {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  /* Cabeçalho Interativo Mobile */
+  .site-header {
+    cursor: pointer;
+  }
+
+  .site-header .header-inner-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .hobby-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* Oculta menus horizontais de desktop */
+  .desktop-nav-menu,
+  .desktop-contact-wrapper {
+    display: none !important;
+  }
+}
+
+/* ===================================================
+   4. TELAS ULTRAESTREITAS (<= 480px)
+   =================================================== */
+@media (max-width: 480px) {
+  main {
+    padding: 1.5rem 0.9rem !important;
+  }
+
+  div[style*="width: 420px"][style*="height: 420px"] {
+    width: 290px !important;
+    height: 290px !important;
+    transform: scale(0.75);
+  }
+
+  div[style*="gap: 0.6rem"] {
+    gap: 0.4rem !important;
+  }
+
+  button[style*="border-radius: 999px"] {
+    padding: 0.35rem 0.75rem !important;
+    font-size: 0.78rem !important;
+  }
+}
+
+/* ===================================================
+   5. DESKTOP (>= 769px)
+   =================================================== */
+@media (min-width: 769px) {
+  .site-header {
+    cursor: default;
+  }
+
+  .header-inner-container {
+    justify-content: space-between !important;
+  }
+
+  .hobby-container {
+    margin: 0;
+  }
+
+  .mobile-menu-drawer {
+    display: none !important;
+  }
 }

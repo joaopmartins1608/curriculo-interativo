@@ -274,7 +274,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigateProjects, onNavigateAbout 
               })}
             </div>
 
-            {/* Núcleo Central: Foto */}
+            {/* Núcleo Central: Foto do Perfil com Zoom e Enquadramento */}
             <div style={{
               width: '210px',
               height: '210px',
@@ -293,9 +293,16 @@ export const Home: React.FC<HomeProps> = ({ onNavigateProjects, onNavigateAbout 
                 backgroundColor: '#0d1124'
               }}>
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
+                  src="/profile.jpg"
                   alt="João Pedro"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center 45%',
+                    transform: 'scale(1.28)',
+                    transformOrigin: 'center 40%'
+                  }}
                 />
               </div>
             </div>

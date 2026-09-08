@@ -12,24 +12,60 @@ interface Project {
 }
 
 const allProjects: Project[] = [
-  // --- Novos Projetos de Hoje (06/09) ---
+  // --- Projetos Concluídos Hoje ---
+  {
+    title: 'Finance Dashboard',
+    category: 'Software',
+    stack: 'Python • Pandas • Matplotlib • Seaborn',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
+    desc: 'Pipeline completo de análise financeira em Python para processamento de transações, consolidação de métricas por categoria e geração automatizada de relatórios visuais.',
+    github: 'https://github.com/joaopmartins1608/finance-dashboard',
+    featured: true
+  },
+  {
+    title: 'Customer Management System',
+    category: 'Software',
+    stack: 'Java • POO • Clean Architecture • NIO.2',
+    image: 'https://midias-totvs.totvs.com/wp-content/uploads/2024/10/gestao-de-clientes.jpg.webp',
+    desc: 'Sistema em camadas (Model, Repository, Service, CLI) para cadastro e gestão de clientes, com regras de validação estritas e persistência direta em disco.',
+    github: 'https://github.com/joaopmartins1608/customer-management-system',
+    featured: true
+  },
+  {
+    title: 'Task Flow',
+    category: 'Ferramentas',
+    stack: 'HTML5 • CSS3 Moderno • Vanilla JavaScript',
+    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=600&q=80',
+    desc: 'Gerenciador de tarefas diárias responsivo com filtros dinâmicos de status, contador de pendências em tempo real e sincronização persistente via Web Storage API.',
+    github: 'https://github.com/joaopmartins1608/task-manager-web',
+    featured: true
+  },
+  {
+    title: 'Email & Report Automator',
+    category: 'Ferramentas',
+    stack: 'Python • Scripting • Template Engine • Logging',
+    image: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&w=600&q=80',
+    desc: 'Ferramenta CLI para automação de despachos de relatórios por e-mail com interpolação de métricas dinâmicas, logs rotacionados e suporte a modo de simulação (dry-run).',
+    github: 'https://github.com/joaopmartins1608/email-report-automator',
+    featured: true
+  },
+
+  // --- Projetos Utilitários ---
   {
     title: 'IPv4 Subnet & CIDR Calculator',
     category: 'Ferramentas',
     stack: 'React • TypeScript • Vite',
     image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80',
     desc: 'Utilitário de redes para cálculo instantâneo de blocos CIDR (/0 a /32), máscaras decimais, endereços de rede, broadcast e dimensionamento de hosts utilizáveis.',
-    github: 'https://github.com/joaopmartins1608/ipv4-subnet-calculator',
-    featured: true
+    github: 'https://github.com/joaopmartins1608/ipv4-subnet-calculator'
   },
   {
     title: 'JSON ↔ CSV Data Converter & Validator',
     category: 'Ferramentas',
     stack: 'React • TypeScript • Vite',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=600&q=80',
     desc: 'Ferramenta bidirecional para transformação e validação de estruturas tabulares e hierárquicas, inferência dinâmica de tipos primitivos e cópia com um clique.',
-    github: 'https://github.com/joaopmartins1608/json-csv-data-converter',
-    featured: true
+    github: 'https://github.com/joaopmartins1608/json-csv-data-converter'
   },
   {
     title: 'Dynamic KPI & SVG Sparkline Widget',
@@ -37,8 +73,7 @@ const allProjects: Project[] = [
     stack: 'React • TypeScript • SVG Nativo • Vite',
     image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80',
     desc: 'Componente analítico para visualização de métricas de desempenho com mapeamento matemático de séries temporais em SVG puro e cálculo de tendências.',
-    github: 'https://github.com/joaopmartins1608/kpi-sparkline-widget',
-    featured: true
+    github: 'https://github.com/joaopmartins1608/kpi-sparkline-widget'
   },
   {
     title: 'Data Integrity & Document Validator API',
@@ -46,11 +81,8 @@ const allProjects: Project[] = [
     stack: 'C# • .NET 8 • Minimal APIs • Swagger',
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80',
     desc: 'Web API RESTful de alta performance para geração e verificação de hashes criptográficos (SHA-256, SHA-512, MD5) e validação matemática de CPF/CNPJ.',
-    github: 'https://github.com/joaopmartins1608/data-integrity-api',
-    featured: true
+    github: 'https://github.com/joaopmartins1608/data-integrity-api'
   },
-
-  // --- Projetos Anteriores ---
   {
     title: 'DevLog & README Architect',
     category: 'Ferramentas',
