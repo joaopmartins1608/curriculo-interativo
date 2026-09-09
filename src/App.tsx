@@ -30,14 +30,8 @@ export function App() {
         {currentTab === 'about' && <About />}
         {currentTab === 'certificates' && <Certificates />}
       </div>
-return (
-  <div className="app-container">
-    <Header currentTab={currentTab} onSelectTab={setCurrentTab} />
-    {/* resto do seu conteúdo */}
-    
-    <Analytics />
-  </div>
-);
+
+      <Analytics />  
       <Footer />
 
       <ContactModal
