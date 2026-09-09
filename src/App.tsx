@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { Projects } from './pages/Projects';
 import { About } from './pages/About';
 import { Certificates } from './pages/Certificates';
+import { Analytics } from '@vercel/analytics/react';
 
 export function App() {
   const [currentTab, setCurrentTab] = useState('home');
@@ -29,7 +30,14 @@ export function App() {
         {currentTab === 'about' && <About />}
         {currentTab === 'certificates' && <Certificates />}
       </div>
-
+return (
+  <div className="app-container">
+    <Header currentTab={currentTab} onSelectTab={setCurrentTab} />
+    {/* resto do seu conteúdo */}
+    
+    <Analytics />
+  </div>
+);
       <Footer />
 
       <ContactModal
