@@ -108,7 +108,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onSelectTab }) => {
           alignItems: 'center',
         }}
       >
-        {/* Botão de Hobbies (Centralizado no mobile via CSS) */}
+        {/* Botão de Hobbies */}
         <div className="hobby-container" style={{ display: 'flex', alignItems: 'center' }}>
           <div
             onClick={(e) => {
@@ -239,7 +239,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onSelectTab }) => {
               }}
             >
               <a
-                href="https://www.linkedin.com/in/joaopadilhaa/"
+                href="https://www.linkedin.com/in/joao-pedro-padilha-martins"
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setIsContactOpen(false)}
@@ -298,7 +298,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onSelectTab }) => {
               </a>
 
               <a
-                href="mailto:joaopedropadilha.m@gmail.com"
+                href="mailto:joaopadilha.dev@gmail.com"
                 onClick={() => setIsContactOpen(false)}
                 className="transition-smooth"
                 style={{
@@ -325,7 +325,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onSelectTab }) => {
         </div>
       </div>
 
-      {/* Dropdown Mobile: Lista Vertical */}
+      {/* Dropdown Mobile */}
       {isMobileMenuOpen && (
         <div
           className="mobile-menu-drawer"
@@ -434,7 +434,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onSelectTab }) => {
             {currentTab === 'certificates' && <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent-blue)' }} />}
           </button>
 
-          {/* 5. Contato */}
+          {/* 5. Contato Mobile */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
             <button
               onClick={() => setIsMobileContactSubOpen(!isMobileContactSubOpen)}
@@ -466,7 +466,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onSelectTab }) => {
             {isMobileContactSubOpen && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', paddingLeft: '0.5rem' }}>
                 <a
-                  href="https://www.linkedin.com/in/joaopadilhaa/"
+                  href="https://www.linkedin.com/in/joao-pedro-padilha-martins"
                   target="_blank"
                   rel="noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -508,7 +508,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onSelectTab }) => {
                 </a>
 
                 <a
-                  href="mailto:joaopedropadilha.m@gmail.com"
+                  href="mailto:joaopadilha.dev@gmail.com"
                   onClick={() => setIsMobileMenuOpen(false)}
                   style={{
                     display: 'flex',
