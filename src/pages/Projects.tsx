@@ -27,6 +27,34 @@ interface Project {
 const allProjects: Project[] = [
   // --- Projetos Visuais & Direção de Arte (Figma & Photoshop) ---
   {
+    title: 'PULSE — Focus & Habit Tracker',
+    category: 'Visual',
+    stack: 'Figma • Apple HIG • Dynamic Island • Live Activities',
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80',
+    desc: 'Sistema de produtividade e micro-hábitos nativo para iOS, projetado com foco profundo, integração à Dynamic Island e feedback visual contínuo.',
+    featured: true,
+    visualDetail: {
+      tool: 'Figma',
+      gallery: [
+        {
+          url: '/projects/pulse-home.png',
+          versionBadge: 'Tela 01 — Home & Foco',
+          caption: 'Visão diária estruturada com card translúcido de sessão ativa, controle de blocos de estudo e monitoramento de hábitos com streaks.'
+        },
+        {
+          url: '/projects/pulse-live-activity.png',
+          versionBadge: 'Tela 02 — Live Activity & Métricas',
+          caption: 'Widget expandido da Dynamic Island para acompanhamento em segundo plano e indicador circular de consistência com gradiente ciano.'
+        }
+      ],
+      highlights: [
+        'Concepção de Live Activity e Dynamic Island seguindo especificações de layout da Apple',
+        'Hierarquia visual orientada a redução de atrito: métricas essenciais legíveis em fração de segundos',
+        'Estilização em Glassmorphism responsivo preparado para renderização nativa em Swift/Tailwind'
+      ]
+    }
+  },
+  {
     title: 'AURA — Spatial Soundscape & Focus',
     category: 'Visual',
     stack: 'Figma • Apple HIG • Design Systems • Dark Mode',
@@ -79,6 +107,29 @@ const allProjects: Project[] = [
         'Iluminação de contorno simulando estúdio físico (magenta profundo vs. ciano vibrante)',
         'Sombra de oclusão realista na base, eliminando o aspecto de recorte flutuante',
         'Iteração visual demonstrada: evolução da versão V1 conceitual para a V2 final'
+      ]
+    }
+  },
+  {
+    title: 'CHRONO // TITANIUM EDITION',
+    category: 'Visual',
+    stack: 'Photoshop • 3D Render • Iluminação de Borda • Direção de Arte',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80',
+    desc: 'Key Visual publicitário explorando texturas de titânio aeroespacial, iluminação dramática de estúdio e ancoragem de cena com pedestal minimalista.',
+    featured: true,
+    visualDetail: {
+      tool: 'Photoshop',
+      gallery: [
+        {
+          url: '/projects/chrono-titanium-definitive.png',
+          versionBadge: 'V2 — Key Visual Definitivo',
+          caption: 'Composição final com rim light de estúdio, pedestal de apoio texturizado, sombra de oclusão realista e microtipografia suíça.'
+        }
+      ],
+      highlights: [
+        'Renderização de texturas metálicas em titânio escovado com reflexos de estúdio de alta fidelidade',
+        'Ancoragem de produto com pedestal monolítico e simulação de sombra de oclusão física',
+        'Tipografia técnica editorial integrada diretamente à composição no padrão Apple Watch'
       ]
     }
   },
@@ -512,7 +563,7 @@ export const Projects: React.FC = () => {
               </p>
             </div>
 
-            {/* Galeria de Prints do Projeto com Badges V1 / V2 e Legendas */}
+            {/* Galeria de Prints do Projeto com Badges e Legendas */}
             <div style={{
               display: 'grid',
               gridTemplateColumns: selectedVisualProject.visualDetail.gallery.length > 1 ? 'repeat(auto-fit, minmax(320px, 1fr))' : '1fr',
